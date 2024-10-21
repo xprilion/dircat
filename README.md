@@ -40,9 +40,9 @@
 
 4. Now you can run `dircat` from anywhere in your terminal!
 
-### Install via Homebrew (coming soon)
+### Install via Homebrew
 
-You will soon be able to install `dircat` via Homebrew with:
+You can install `dircat` via Homebrew with:
 
 ```bash
 brew tap xprilion/tools
