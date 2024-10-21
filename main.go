@@ -7,11 +7,23 @@ import (
 	"os"
 )
 
+const version = "dircat v0.1.2"
+
 func main() {
 	// Define flags
 	var outputFile string
+	var showVersion bool
+
 	flag.StringVar(&outputFile, "o", "", "Specify output file (optional)")
+	flag.BoolVar(&showVersion, "version", false, "Show version information")
+	flag.BoolVar(&showVersion, "v", false, "Show version information (shorthand)")
 	flag.Parse()
+
+	// Handle version flag
+	if showVersion {
+		fmt.Println(version)
+		return
+	}
 
 	if flag.NArg() < 2 {
 		fmt.Println("Usage: dircat <subcommand> <folder_path> [-o output_file]")
